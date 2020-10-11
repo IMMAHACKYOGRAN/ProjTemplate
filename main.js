@@ -1,27 +1,16 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 100;
-canvas.height = 100;
+canvas.width = 100; // Your width here!
+canvas.height = 100; // Your height here!
 
-function loadImage(url) {
-    return new Promise(resolve => {
-        const img = new Image();
-        img.addEventListener('load', () => {
-            resolve(img);
-        });
-        img.src = url;
-    });
-}
-
-function draw(url, x, y) {
-    loadImage(url)
-    .then(img => {
-        ctx.drawImage(img, x, y);
-    });
-}
+var util = new Util();
+// Util.draw(url, x, y) draws img.
 
 function update() {
+
+  // This Will Be Called Every Frame.
+  
   requestAnimationFrame(update);
 }
 
