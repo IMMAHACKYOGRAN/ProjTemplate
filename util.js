@@ -1,5 +1,4 @@
-function Util() {
-    
+function Util() {  
     this.loadImage = function(url) {
         return new Promise(resolve => {
             const img = new Image();
@@ -16,4 +15,10 @@ function Util() {
             ctx.drawImage(img, x, y);
         });
     }
+
+    this.buidGrid = function (columns, rows) {
+        return new Array(columns).fill(null)
+          .map(() => new Array(rows).fill(0));
+    }
+    
 }

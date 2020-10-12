@@ -1,15 +1,14 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 100; // Your width here!
-canvas.height = 100; // Your height here!
+canvas.width = 400; // Your width here!
+canvas.height = 400; // Your height here!
+var width = canvas.width,
+    height = canvas.height
 
-var util = new Util();
-// Util.draw(url, x, y) draws img.
+var util = new Util(); // util.draw(url, x, y) draws img. 
 
 function update() {
-
-  // This Will Be Called Every Frame.
   
   requestAnimationFrame(update);
 }
